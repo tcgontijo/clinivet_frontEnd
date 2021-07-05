@@ -6,6 +6,7 @@ import ListaDoencas from './components/doenca/ListaDoencas';
 import CriaDoenca from './components/doenca/CriaDoenca';
 import EditaDoenca from './components/doenca/EditaDoenca';
 import Home from './components/Home';
+import Footer from './components/Footer'
 
 class App extends Component {
     render() {
@@ -24,6 +25,9 @@ class App extends Component {
                                 </Switch>
                             </div>
                         </div>
+                    </div>
+                    <div className="container-fluid row m-auto bg-primary">
+                        <Footer/>
                     </div>
                 </div>
             </Router>
