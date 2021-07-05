@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const httpClient = axios.create({
-    //baseURL: "https://clinivet-tulio.herokuapp.com",
-    baseURL: "http://localhost:8080",
+    baseURL: "https://clinivet-tulio.herokuapp.com",
+    //baseURL: "http://localhost:8080",
     headers: {
         "Content-type": "application/json"
     }
