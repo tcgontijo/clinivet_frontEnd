@@ -10,7 +10,8 @@ class CriaDoenca extends Component {
         this.state = {nome:""}
     }
 
-    postDoenca = () => {
+    postDoenca = (e) => {
+        e.preventDefault();
         api.createDoenca(this.state)
         .then(() => alert("Doença adicionada com sucesso!"))
         .then(() => this.setState({nome:""}))

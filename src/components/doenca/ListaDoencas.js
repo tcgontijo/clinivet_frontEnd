@@ -11,8 +11,7 @@ class ListaDoencas extends Component {
         this.state = {doencas: []}
     }
     
-    deletaDoenca(id) {
-        
+    deletaDoenca = (id) => {
         confirmAlert({
             title: 'Atenção',
             message: 'Tem certeza de que deseja excluir esta doença?',
@@ -31,11 +30,7 @@ class ListaDoencas extends Component {
                 onClick: () => window.location = "/doencas"
               }
             ]
-          });
-
-    
-
-        
+          });        
     }
 
     componentDidMount = () => {   
@@ -75,7 +70,7 @@ class ListaDoencas extends Component {
                                         <td>{doenca.nome}</td>
                                         <td>
                                             <Link to={"/edita-doenca/" + doenca.id}><button className="btn btn-success">Editar</button></Link>
-                                            <button className="btn btn-danger" onClick={this.deletaDoenca.bind(this,doenca.id)} >Deletar</button>
+                                            <button className="btn btn-danger" onClick={this.deletaDoenca.bind(this, doenca.id)} >Deletar</button>
                                         </td>
                                     </tr>
                                 )})}

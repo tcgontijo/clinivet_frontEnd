@@ -19,7 +19,8 @@ class EditaDoenca extends Component {
         .catch(err => console.log(err));
     }    
     
-    putDoenca = () => {
+    putDoenca = (e) => {
+        e.preventDefault();
         api.updateDoenca(this.state.id, {nome: this.state.nome})
         .then(() => alert("Doença alterada com sucesso!"))
         .then(() => window.location = "/doencas")
