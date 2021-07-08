@@ -22,7 +22,7 @@ class ListaDoencas extends Component {
                     api.removeDoenca(id)
                     .then(()=> alert("Doença removida com sucesso!"))
                     .then(() => window.location = "/doencas")
-                    .catch(err => alert(err))
+                    .catch((err) => alert(err.response.data))
                 }
               },
               {
